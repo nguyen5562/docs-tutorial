@@ -19,6 +19,7 @@ import Link from '@tiptap/extension-link';
 import TextAlign from '@tiptap/extension-text-align';
 import useEditorStore from '@/store/use-editor-store';
 import { FontSizeExtension } from '@/extensions/font-size';
+import { LineHeightExtension } from '@/extensions/line-height';
 
 const Editor = () => {
     const { setEditor } = useEditorStore();
@@ -58,6 +59,7 @@ const Editor = () => {
         extensions: [
             StarterKit,
             FontSizeExtension,
+            LineHeightExtension,
             TextAlign.configure({
                 types: ['heading', 'paragraph'],
             }),
